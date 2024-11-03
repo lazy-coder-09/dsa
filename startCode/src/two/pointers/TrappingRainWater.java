@@ -1,0 +1,32 @@
+package two.pointers;
+
+public class TrappingRainWater {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//Space 1 time n
+    public int trap(int[] height) {
+        int left = 0;
+        int right = height.length-1;
+        int leftMax = height[0];
+        int rightMax = height[right];
+        int water = 0;
+        while(left<right){
+            if(leftMax<=rightMax){
+                left++;
+                leftMax = Math.max(leftMax, height[left]);
+                water += leftMax - height[left];
+            }else{
+                right--;
+                rightMax = Math.max(rightMax, height[right]);
+                water += rightMax - height[right];
+            }
+            
+        }
+        return water;
+    }
+
+
+}

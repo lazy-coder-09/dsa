@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module startCode {
+}
+//codeByLazyCoder
